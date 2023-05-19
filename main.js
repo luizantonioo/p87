@@ -48,31 +48,36 @@ var mouseEvent = "empty";
         }
 
     }
-
+    
     /*Crie um event listener para ""
     e chame a função my_mouseup*/
-listener="mouseup";
-function my_mouseup(e) {
+    canvas.addEventListener("mouseup", my_mouseup);
+    function my_mouseup(e)
+    {
+        mouseEvent = "mouseup";
+    }
 
+    canvas.addEventListener("mouseleave", my_mouseleave);
+    function my_mouseleave(e)
+    {
+        mouseEvent = "mouseleave";
+    }
 
    /* Crie uma função chamada my_mouseup com o evento como parâmetro.*/
- my_mouseup="parameter";
+
    /* Atribua "mouseUP" ao mouseEvent
     dentro da função
     */
-mouseEvent="mouseUP";
-}
+
+
     /*Crie uma event listener para "mouseleave"
     e chame a função my_mouseleave*/
-listener="mouseleave";
-function my_mouseleave(e)
-{
+
+
    /* Crie uma função chamada my_mouseleave com event de parâmetro.*/
-   my_mouseleave="parameter";
+   
     /*Atribua "mouseleave" ao mouseEvent
     dentro da função*/
-    mouseEvent="mouseleave";
-}
 function clearArea() {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
