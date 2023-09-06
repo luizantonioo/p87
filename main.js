@@ -8,8 +8,8 @@ var mouseEvent = "empty";
 
     /*Retire a linha de comentário errada*/
     canvas.addEventListener("mousedown", my_mousedown);
-    canvas.setEventListener("mousedown", my_mousedown);
-    canvas.getEventListener("mousedown", my_mousedown);
+   // canvas.setEventListener("mousedown", my_mousedown);
+   // canvas.getEventListener("mousedown", my_mousedown);
 
     function my_mousedown(e)
     {
@@ -23,19 +23,19 @@ var mouseEvent = "empty";
     Crie um event listener para "mousemove"
     e chame a função my_mousemove
     */
-
+    canvas.addEventListener("mousemove", my_mousemove);
     function my_mousemove(e)
     {
         /*Retire a linha de comentário errada*/
         currentPositionOfMouseX = e.clientX - canvas.offsetLeft;
-        currentPositionOfMouseX = e.clientX - canvas.offsetRight;
-        currentPositionOfMouseX = e.clientX - canvas.offsetBottom;
+       // currentPositionOfMouseX = e.clientX - canvas.offsetRight;
+        //currentPositionOfMouseX = e.clientX - canvas.offsetBottom;
 
         /*
         crie currentPositionOfMouseY and
         assign it e.clientY - canvas.offsetTop;
         */
-        
+        currentPositionOfMouseY = e.clientY - canvas.offsetTop;
         if (mouseEvent == "mouseDown") {
             
         console.log("Posição atual das coordenadas x e y= ");
